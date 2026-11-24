@@ -16,7 +16,7 @@ defaults
 
 frontend ggp_http_front
     bind *:80
-    bind *:443 ssl crt /etc/haproxy/certs/www.kumizi.com.pem
+    bind *:443 ssl crt /etc/haproxy/certs/www.ggptrial.ooguy.com.pem
     http-request set-header X-Forwarded-Proto https if { ssl_fc }
     redirect scheme https code 301 if !{ ssl_fc }
     default_backend ggp_webservers
